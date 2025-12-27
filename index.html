@@ -116,6 +116,31 @@
 </footer>
 
 <a class="wa" href="https://wa.me/91XXXXXXXXXX">Chat on WhatsApp</a>
+  
+<script>
+const snowCount = 40;
+
+for (let i = 0; i < snowCount; i++) {
+  let snow = document.createElement("div");
+  snow.innerHTML = "❄";
+  snow.style.position = "fixed";
+  snow.style.top = Math.random() * -100 + "px";
+  snow.style.left = Math.random() * 100 + "vw";
+  snow.style.fontSize = Math.random() * 10 + 10 + "px";
+  snow.style.opacity = Math.random();
+  snow.style.zIndex = "9999";
+  snow.style.pointerEvents = "none";
+  snow.style.animation = `fall ${Math.random()*5+5}s linear infinite`;
+  document.body.appendChild(snow);
+}
+
+const style = document.createElement("style");
+style.innerHTML = `
+@keyframes fall {
+  to { transform: translateY(110vh); }
+}`;
+document.head.appendChild(style);
+</script>
 
 </body>
 </html>
